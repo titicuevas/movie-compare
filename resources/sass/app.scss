@@ -1,0 +1,8 @@
+// Variables (debe ir antes que Bootstrap)
+@use 'variables';
+
+// Bootstrap (ya usa @use internamente en versiones nuevas)
+@use 'bootstrap/scss/bootstrap';
+
+// Fuentes (esto se queda como @import porque es una URL externa)
+@import url('https://fonts.bunny.net/css?family=Nunito');
