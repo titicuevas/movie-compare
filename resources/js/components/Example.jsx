@@ -1,23 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import { Button } from 'react-bootstrap';
 
-function Example() {
+export default function Example() {
     return (
-        <div className="text-center mt-5">
-            <h1>Bienvenido a Movie Compare</h1>
+        <div className="container text-center mt-5">
+            <h2>🎬 React está funcionando correctamente</h2>
+            <p>Prueba de integración con React y Bootstrap</p>
             <Button variant="primary">Haz clic aquí</Button>
         </div>
-    );
-}
-
-export default Example;
-
-if (document.getElementById('app')) {
-    const root = ReactDOM.createRoot(document.getElementById('app'));
-    root.render(
-        <React.StrictMode>
-            <Example />
-        </React.StrictMode>
     );
 }
