@@ -3,6 +3,9 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TMDBController;
+use App\Http\Controllers\HomeController;
+
 use Inertia\Inertia;
 
 Route::get('/', function () {
@@ -23,5 +26,20 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+//Cuando un usuario se loguea pueda ver esta vista tal y como inicia
+
+
+Route::get('/home', [HomeController::class, 'index'])
+    ->middleware(['auth', 'verified'])
+    ->name('home');
+
+
+//Rutas para la busqueda
+
+
+
+Route::get('/search', [TMDBController::class, 'search'])->name('movies.search');
+
 
 require __DIR__.'/auth.php';

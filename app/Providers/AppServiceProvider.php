@@ -15,6 +15,10 @@ class AppServiceProvider extends ServiceProvider
         //
     }
 
+    //Redirigue al home cuando nos logueamos
+
+    public const HOME = '/home';
+    
     /**
      * Bootstrap any application services.
      */
