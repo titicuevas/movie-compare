@@ -5,6 +5,7 @@ use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TMDBController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MovieComparisonController;
 
 use Inertia\Inertia;
 
@@ -40,6 +41,10 @@ Route::get('/home', [HomeController::class, 'index'])
 
 
 Route::get('/search', [TMDBController::class, 'search'])->name('movies.search');
+
+
+Route::post('/compare-movies', [MovieComparisonController::class, 'compare'])->name('movies.compare');
+
 
 
 require __DIR__.'/auth.php';
